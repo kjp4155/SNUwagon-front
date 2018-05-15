@@ -1,9 +1,11 @@
 import React, { PropTypes } from 'react'
+import styled from 'styled-components'
 import { connect } from 'react-redux'
 import { Table, TableBody, TableHeader, TableHeaderColumn, TableRow } from 'material-ui/Table'
 import PostListCell from '../../../components/atoms/PostListCell'
 import { changeRoute } from '../../../store/user/actions'
 import { getPostList } from '../../../store/list/actions'
+
 
 class PostListTable extends React.Component {
   constructor(props) {

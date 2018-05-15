@@ -8,7 +8,7 @@ const style = {
   width: 500,
   margin: 20,
   textAlign: 'center',
-  display: 'inline-block',
+  display: 'flex',
   padding: '20px 20px 20px 20px',
 }
 
@@ -24,7 +24,7 @@ const HomePage = () => {
           padding: '10px 10px 10px',
         }}
       >
-        <Paper style={{ style }} zDepth={2}>
+        <Paper style={{ style }} zDepth={0}>
           <IndexBox />
         </Paper>
       </div>

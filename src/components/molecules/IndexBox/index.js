@@ -2,9 +2,25 @@ import React, { PropTypes } from 'react'
 import * as colors from 'material-ui/styles/colors'
 import RaisedButton from 'material-ui/RaisedButton'
 import Paper from 'material-ui/Paper'
+import styled from 'styled-components'
 import { connect } from 'react-redux'
 import { changeRoute } from '../../../store/user/actions'
 
+const WRAPPER = styled.div`
+  width: 300px;
+  margin: 0 auto;
+  padding-right: 250px;
+`
+
+const BUTTONWRAPPER = styled.div`
+  width: 300px;
+  height: 50px;
+  margin: 0 auto;
+`
+
+const style = {
+  width: 200,
+}
 
 class IndexBox extends React.Component {
   constructor(props) {
@@ -28,15 +44,34 @@ class IndexBox extends React.Component {
 
   render() {
     return (
-      <div>
-        <RaisedButton className={'question-write-button'} onClick={this.handleClickWriteQuestion}>Write Question</RaisedButton>
+      <WRAPPER>
+        <BUTTONWRAPPER>
+          <RaisedButton 
+          fullWidth={'true'}
+          className={'question-write-button'} onClick={this.handleClickWriteQuestion}>Write Question</RaisedButton>
+        </BUTTONWRAPPER>
         {' '}
-        <RaisedButton className={'information-write-button'} disabled>Write Information</RaisedButton>
+        
+        <BUTTONWRAPPER>
+          <RaisedButton 
+          fullWidth={'true'}
+          className={'post-list-button'} onClick={this.handleClickPostList}>Question List</RaisedButton>
+        </BUTTONWRAPPER>
+        
         {' '}
-        <RaisedButton className={'post-list-button'} onClick={this.handleClickPostList}>Post List</RaisedButton>
+        <BUTTONWRAPPER>
+          <RaisedButton
+          fullWidth={'true'}
+          className={'information-write-button'} disabled>Write Information</RaisedButton>
+        </BUTTONWRAPPER>
+        
         {' '}
-        <RaisedButton className={'search-button'} disabled>Search</RaisedButton>
-      </div>
+        <BUTTONWRAPPER>
+          <RaisedButton
+          fullWidth={'true'}
+          className={'search-button'} disabled>Search</RaisedButton>
+        </BUTTONWRAPPER>
+      </WRAPPER>
     )
   }
 }
